@@ -14,7 +14,7 @@ sudo docker buildx build -t computer-club .
 Запустить образ в контейнере:
 
 ```shell
-sudo docker run -v ./input.txt:/app/input.txt -t computer-club
+sudo docker run -v "$(pwd)/input.txt:/app/input.txt" -t computer-club
 ```
 
 Путь до входного файла указывается в аргументе `-v` перед `:`.  
